@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>상품리스트</title>
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<script type="text/javascript">   
+$(document).ready( function() {
+
+$("#headers").load("../common/header.html");  // 원하는 파일 경로를 삽입하면 된다
+$("#footers").load("../common/footer.html");  // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+
+});
+</script>
+
+<meta name = "viewport" content = "width=device-width, initial-scale=1">
+<link rel = "stylesheet" href = "../css/admin/productList.css">
+
+<Style>
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+</Style>
+</head>
+<body>
+
+<div id = "headers"></div>
+
+<!-- 컨텐츠 시작 -->
+
+<div id ="container">
+	<div id = "contents">
+		<!-- section1 시작 -->
+		<div id = "section1">
+			<h1 align = "center">
+				상품목록
+				<hr>
+			</h1>
+		</div>
+		
+		<!-- section2 시작 -->
+		<div id = "section2">
+			<!-- 좌측 내용 시작 -->
+			<div id = "left">
+				<div class = "left_inside">
+					<!-- 좌측메뉴 -->
+					<ul class = "menubarL">
+						<li><h3>관리자 메뉴</h3></li>
+						<li>
+							<h4>재고관리</h4>
+							<ul class = "order_menu">
+								<li><a href = "productList.html">상품목록</a></li>
+								<li><a href = "productAdd.html">상품등록</a></li>
+							</ul>
+						</li>
+						
+						<li>
+							<h4>주문관리</h4>
+							<ul class = "order_menu">
+								<li><a href = "orderList.html">주문목록</a></li>
+								<li><a href = "refund_request.html">환불목록</a></li>
+							</ul>
+						</li>
+						
+						<li><h4><a href = "accountList.html">회원정보</a></h4></li>
+						<li><h4><a href = "../common/board.html">게시판</a></h4></li>
+						<li><h4><a href = "../common/main.html">로그아웃</a></h4></li>
+						
+					</ul>
+					<!-- 좌측 메뉴바 -->
+				</div>
+			</div>
+			
+			<!-- 우측 내용 시작 -->
+			<div id = "right">
+				<div class = "table_div">
+					<table style = "width : 1000px" align = "center">
+						<tr>
+							<th style = "width : 5%">번호</th>
+							<th style = "width : 10%">상품코드</th>
+							<th style = "width : 15%">상품명</th>
+							<th style = "width : 10%">제조사</th>
+							<th style = "width : 10%">상품가격</th>
+							<th style = "width : 10%">카테고리</th>
+							<th style = "width : 8%">상품재고</th>
+							<th style = "width : 10%">상태</th>
+							<th style = "width : 10%">등록자</th>
+							<th style = "width : 15%">등록일</th>
+						</tr>
+						
+						<!-- 게시글이 있으면 -->
+						<tr>
+							<td>1</td>
+							<td>1001</td>
+							<td>삼성모니터</td>
+							<td>샘송</td>
+							<td>99,999원</td>
+							<td>모니터</td>
+							<td>1000</td>
+							<td>판매중</td>
+							<td>천태진</td>
+							<td>2022.01.26</td>
+						</tr>
+						
+						<tr>
+							<td>2</td>
+							<td>1002</td>
+							<td>LG모니터</td>
+							<td>LG</td>
+							<td>88,888원</td>
+							<td>모니터</td>
+							<td>500</td>
+							<td>판매중</td>
+							<td>천태진</td>
+							<td>2022.01.26</td>
+						</tr>
+						
+						<tr>
+							<td>3</td>
+							<td>1003</td>
+							<td>BenQ GW2780 아이케어 무결점</td>
+							<td>BenQ</td>
+							<td>219,000원</td>
+							<td>모니터</td>
+							<td>999</td>
+							<td>판매중</td>
+							<td>천태진</td>
+							<td>2022.01.27</td>
+						</tr>
+						
+						<tr>
+							<td>4</td>
+							<td>1004</td>
+							<td>LG전자 32QN650</td>
+							<td>LG</td>
+							<td>409,490원</td>
+							<td>모니터</td>
+							<td>9999</td>
+							<td>판매중</td>
+							<td>천태진</td>
+							<td>2022.01.27</td>
+						</tr>
+						
+						<tr>
+							<td>5</td>
+							<td>1005</td>
+							<td>알파스캔 AOC 24B2</td>
+							<td>알파스캔</td>
+							<td>179,000원</td>
+							<td>모니터</td>
+							<td>1234</td>
+							<td>판매중</td>
+							<td>천태진</td>
+							<td>2022.01.27</td>
+						</tr>
+						
+						<tr>
+							<td>6</td>
+							<td>1006</td>
+							<td>로지텍 MK235</td>
+							<td>로지텍</td>
+							<td>20,900원</td>
+							<td>키보드</td>
+							<td>10</td>
+							<td>판매중</td>
+							<td>천태진</td>
+							<td>2022.01.27</td>
+						</tr>
+						
+						<tr>
+							<td>7</td>
+							<td>1007</td>
+							<td>앱코 HACKER K660</td>
+							<td>앱코</td>
+							<td>49,800원</td>
+							<td>키보드</td>
+							<td>100000</td>
+							<td>판매중</td>
+							<td>천태진</td>
+							<td>2022.01.27</td>
+						</tr>
+						
+						<tr>
+							<td>8</td>
+							<td>1008</td>
+							<td>MSI 지포스 RTX 3080 슈프림</td>
+							<td>MSI</td>
+							<td>2,0441,940원</td>
+							<td>그래픽카드</td>
+							<td>2500</td>
+							<td>판매중</td>
+							<td>천태진</td>
+							<td>2022.01.27</td>
+						</tr>
+						
+						<tr>
+							<td>9</td>
+							<td>1009</td>
+							<td>인텔 코어i5-12세대 12600K</td>
+							<td>인텔</td>
+							<td>403,130원</td>
+							<td>CPU</td>
+							<td>5000</td>
+							<td>판매중</td>
+							<td>천태진</td>
+							<td>2022.01.27</td>
+						</tr>
+						
+					</table>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<div id = "footers"></div>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+     
+    <mapper namespace="com.spring.screen_choen_sp.dao.AdminDAO">  <!-- namespace="패키지명.인터페이스" -->
+		
+		<select id="idPasswordChk" parameterType="java.util.Map" resultType="int">
+			SELECT COUNT(*) FROM AD_ACCOUNT WHERE ad_id=#{strId} AND password=#{strPassword}
+		</select>
+		
+		<select id="acCode" parameterType="String" resultType="int">
+			SELECT ac_code FROM AD_ACCOUNT WHERE ad_id=#{strId}
+		</select>
+		
+    </mapper>

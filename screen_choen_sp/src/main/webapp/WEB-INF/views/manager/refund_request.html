@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>주문목록</title>
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<script type="text/javascript">   
+$(document).ready( function() {
+
+$("#headers").load("../common/header.html");  // 원하는 파일 경로를 삽입하면 된다
+$("#footers").load("../common/footer.html");  // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+
+});
+</script>
+
+<meta name = "viewport" content = "width=device-width, initial-scale=1">
+<link rel = "stylesheet" href = "../css/admin/refund_request.css">
+
+<Style>
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+</Style>
+</head>
+<body>
+
+<div id = "headers"></div>
+
+<!-- 컨텐츠 시작 -->
+
+<div id ="container">
+	<div id = "contents">
+		<!-- section1 시작 -->
+		<div id = "section1">
+			<h1 align = "center">
+				환불목록
+				<hr>
+			</h1>
+		</div>
+		
+		<!-- section2 시작 -->
+		<div id = "section2">
+			<!-- 좌측 내용 시작 -->
+			<div id = "left">
+				<div class = "left_inside">
+					<!-- 좌측메뉴 -->
+					<ul class = "menubarL">
+						<li><h3>관리자 메뉴</h3></li>
+						<li>
+							<h4>재고관리</h4>
+							<ul class = "order_menu">
+								<li><a href = "productList.html">상품목록</a></li>
+								<li><a href = "productAdd.html">상품등록</a></li>
+							</ul>
+						</li>
+						
+						<li>
+							<h4>주문관리</h4>
+							<ul class = "order_menu">
+								<li><a href = "orderList.html">주문목록</a></li>
+								<li><a href = "refund_request.html">환불목록</a></li>
+							</ul>
+						</li>
+						
+						<li><h4><a href = "accountList.html">회원정보</a></h4></li>
+						<li><h4><a href = "../common/board.html">게시판</a></h4></li>
+						<li><h4><a href = "../common/main.html">로그아웃</a></h4></li>
+						
+					</ul>
+					<!-- 좌측 메뉴바 -->
+				</div>
+			</div>
+			
+			<!-- 우측 내용 시작 -->
+			<div id = "right">
+				<div class = "table_div">
+					<table style = "width : 1000px" align = "center">
+						<tr>
+							<th style = "width : 5%">번호</th>
+							<th style = "width : 15%">상품명</th>
+							<th style = "width : 5%">수량</th>
+							<th style = "width : 10%">주문아이디</th>
+							<th style = "width : 15%">결제금액</th>
+							<th style = "width : 15%">주문승인일</th>
+							<th style = "width : 15%">환불승인일</th>
+							<th style = "width : 5%">상태</th>
+							<th style = "width : 7.5%">환불승인</th>
+							<th style = "width : 7.5%">환불취소</th>
+						</tr>
+						
+						<!-- 게시글이 있으면 -->
+						<tr>
+							<td>1</td>
+							<td>삼성모니터</td>
+							<td>10</td>
+							<td>ctj7743</td>
+							<td>2022.01.26</td>
+							<td>9,999,990</td>
+							<td>2022.01.26</td>
+							<td>완료</td>
+							<td>
+								<input type = "submit" class = "inputButton" value = "승인">
+							</td>
+							<td>
+								<input type = "submit" class = "inputButton2" value = "거부">
+							</td>
+						</tr>
+						
+						<tr>
+							<td>2</td>
+							<td>엘쥐모니터</td>
+							<td>5</td>
+							<td>asdf123</td>
+							<td>2022.01.26</td>
+							<td>1,875,000</td>
+							<td>2022.01.26</td>
+							<td>대기</td>
+							<td>
+								<input type = "submit" class = "inputButton" value = "승인">
+							</td>
+							<td>
+								<input type = "submit" class = "inputButton2" value = "거부">
+							</td>
+						</tr>
+						
+						<tr>
+							<td colspan = "10">알고계셨나요? 구글 로그인 할때 @gmail.com은 생략이 가능하다는 걸</td>
+						</tr>
+						
+					</table>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<div id = "footers"></div>
+
+</body>
+</html>
